@@ -31,7 +31,9 @@ namespace trenink_pole
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             GenerujPole(pole, -999,1000);
-            TxtBox.Text = string.Join("; ",pole) ;
+            TxtBox.Text = string.Join("; ",pole);
+            TxtBox.Text += "\r\n\r\n";
+            TxtBox.Text += $"součet = {soucetprvkuvpoli(pole)}";
         }
 
 
@@ -65,6 +67,7 @@ namespace trenink_pole
             {
                 soucet = soucet + array[i];
             }
+            return soucet;
         }
     }
 }
